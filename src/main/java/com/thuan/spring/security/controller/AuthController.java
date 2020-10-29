@@ -49,6 +49,13 @@ public class AuthController {
 		token.setTokenExpDate(jwtUtil.generateExpirationDate());
 		token.setCreatedBy(userPrincipal.getUserId());
 		tokenService.createToken(token);
+
 		return ResponseEntity.ok(token.getToken());
+	}
+
+	@GetMapping("/hello")
+	public ResponseEntity<String> hello() {
+
+		return ResponseEntity.ok("hello");
 	}
 }

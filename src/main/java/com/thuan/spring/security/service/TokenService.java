@@ -4,4 +4,6 @@ import com.thuan.spring.security.entity.Token;
 
 public interface TokenService {
 	Token createToken(Token Token);
+	
+	Token findByToken(String token);
 }
