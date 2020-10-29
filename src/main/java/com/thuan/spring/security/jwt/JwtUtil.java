@@ -45,8 +45,8 @@ public class JwtUtil {
 	}
 
 	public Date generateExpirationDate() {
-		// 10000 : 10 second
-		return new Date(System.currentTimeMillis() + 10000);
+		// 60_000 : 60 second
+		return new Date(System.currentTimeMillis() + 60_000);
 	}
 
 	private JWTClaimsSet getClaimsFromToken(String token) {
